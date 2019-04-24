@@ -16,3 +16,19 @@
 // const imagePath = (name) => images(name, true)
 
 console.log('Hello World from Webpacker')
+
+import Chart from 'chart.js';
+
+var ctx = document.getElementById('consumption-graph');
+
+var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2019-03-15 00:00', '2019-03-15 00:01', '2019-03-15 00:02', '2019-03-15 00:03', '2019-03-15 00:04', '2019-03-15 00:05'],
+      datasets: [{
+        label: 'Consumption',
+        data: [2.41, 1.48, 2.53, 2.00, 2.20, 1.82]
+      }]
+    },
+
+});
