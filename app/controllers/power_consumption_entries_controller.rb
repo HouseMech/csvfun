@@ -1,11 +1,13 @@
 class PowerConsumptionEntriesController < ApplicationController
-  def new
+  def import
+    PowerConsumptionEntry.import(params[:file])
+    redirect_to root_url, notice "Data imported."
   end
 
-  def create  
+  def create
   end
 
-
-
-  @power_consumption_entries = PowerConsumptionEntry.order("interval_time asc")
+  def index
+    @power_consumption_entries = PowerConsumptionEntry.order("interval_time asc")
+  end
 end
