@@ -1,4 +1,8 @@
 <h1>Welcome Page</h1>
 <p>This project is designed to take in a CSV file and output its contents in a graph.</p>
 
+<script>
+  var consumption_data = <%== json_escape(@power_consumption_entries.to_json) %>;
+</script>
+
 <canvas id="consumption-graph"></canvas>

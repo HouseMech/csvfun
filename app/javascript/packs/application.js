@@ -21,13 +21,16 @@ import Chart from 'chart.js';
 
 var ctx = document.getElementById('consumption-graph');
 
+let labels = consumption_data.map(entry => entry.interval_time);
+let data = consumption_data.map(entry => entry.net_consumption);
+
 var myBarChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['2019-03-15 00:00', '2019-03-15 00:01', '2019-03-15 00:02', '2019-03-15 00:03', '2019-03-15 00:04', '2019-03-15 00:05'],
+      labels: labels,
       datasets: [{
         label: 'Consumption',
-        data: [2.41, 1.48, 2.53, 2.00, 2.20, 1.82]
+        data: data
       }]
     },
 
