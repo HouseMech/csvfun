@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_number: MyString
+  interval_time: 
+  net_consumption: 
+  net_consumption: 
+
+two:
+  account_number: MyString
+  interval_time: 
+  net_consumption: 
+  net_consumption: 

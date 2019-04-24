@@ -1,0 +1,2 @@
+class PowerConsumptionEntry < ApplicationRecord
+end
