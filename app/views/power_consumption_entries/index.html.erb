@@ -1,0 +1,15 @@
+<h1>The Graph Page</h1>
+<p>Here be graphs.</p>
+
+<h4> Import Data Here </h4>
+		<%= form_tag power_consumption_entries_path, method: :post, multipart: true do %>
+		  <%= file_field_tag :file %>
+		  <%= submit_tag "Import CSV" %>
+		<% end %>
+</div>
+
+<script>
+  var consumption_data = <%== json_escape(@power_consumption_entries.to_json) %>;
+</script>
+
+<canvas id="consumption-graph"></canvas>
