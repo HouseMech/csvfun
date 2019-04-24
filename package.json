@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^4.0.2",
+    "chart.js": "^2.8.0",
     "jquery": "^3.4.0"
   },
   "devDependencies": {
